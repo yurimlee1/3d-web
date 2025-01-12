@@ -7,6 +7,8 @@ import { Leva } from 'leva';
 import Target from "../components/Target";
 import { useMediaQuery } from 'react-responsive';
 import { calculateSizes } from '../constants/index.js';
+import ReactLogo from '../components/ReactLogo';
+import HeroCamera from "../components/HeroCamera.jsx";
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -32,17 +34,15 @@ const Hero = () => {
                         <Leva hidden />
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
 
-                        {/*<HeroCamera isMobile={isMobile}>*/}
+                        <HeroCamera isMobile={isMobile}>
                             <HackerRoom scale={sizes.deskScale}
                                         position={sizes.deskPosition}
                                         rotation={[0.1, -Math.PI, 0]} />
-                        {/*</HeroCamera>*/}
+                        </HeroCamera>
 
                         <group>
                             <Target position={sizes.targetPosition} />
-                            {/*<ReactLogo position={sizes.reactLogoPosition} />*/}
-                            {/*<Rings position={sizes.ringPosition} />*/}
-                            {/*<Cube position={sizes.cubePosition} />*/}
+                            <ReactLogo position={sizes.reactLogoPosition} />
                         </group>
 
                         <ambientLight intensity={1} />
