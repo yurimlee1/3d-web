@@ -24,7 +24,7 @@ const Hero = () => {
                 font-generalsans'>
                     Hi, I am Yurim<span className='waving-hand'>👋</span>
                 </p>
-                <p className='hero_tag text-gray_gradient'>Building Products & Brands</p>
+                <p className='hero_tag text-gray_gradient'>See How My Computer Moves!</p>
             </div>
 
             <div className='w-full h-full absolute inset-0'>
